@@ -1,16 +1,18 @@
 from random import randint
 """A number-guessing game."""
 
-# Put your code here
-
-print("I'll guess your number... give me a number between 1 and 100.")
+print("Guess my number, it's between 1 and 100.")
  
 player_name = input("What's your name? ")
 
 guess = -100  #initialize guess value 
 
-print(player_name)
-
 number = randint(1,100)
-print(number)
-# print(type(number))
+
+while guess != number: 
+    guess = input("What's your next guess?")
+    if guess < number:
+        print("Too Low!")
+    if guess > number("Too High!")
+    if guess == number: 
+        print("You got it!")
