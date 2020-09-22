@@ -19,14 +19,18 @@ def check_within_range(value):
 while guess != number: 
     guess = input("What's your guess? ")
     number_of_guesses += 1
-    guess = int(guess)
-    if guess < number:
-        print("Too Low!")
-    if guess > number:
-        print("Too High!")
-    check_within_range(guess)
-    if guess == number: 
-        print(f"You got it in {number_of_guesses} guesses!")
+    
+    try: 
+        guess = int(guess)
+        if guess < number:
+            print("Too Low!")
+        if guess > number:
+            print("Too High!")
+        check_within_range(guess)
+        if guess == number: 
+            print(f"You got it in {number_of_guesses} guesses!")
+    except: 
+        print("Hey, give me an INTEGER. I'm still counting that as a guess.")
 
 
 
